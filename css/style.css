@@ -640,7 +640,7 @@ footer .socialMedias svg:hover {
   width: 100%;
   height: 80vh;
   padding: 30px 2% 30px 2%;
-  background-image: url(../assets/images/aboutMe/aboutMe__backgroundDesktop.jpg);
+  background-image: url(./../assets/images/aboutMe/aboutMe__backgroundDesktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -807,7 +807,7 @@ footer .socialMedias svg:hover {
   height: 60vh;
   margin-top: 50px;
   padding: 30px 5% 30px 5%;
-  background-image: url(../assets/images/hirePlan/hirePlan__background.JPG);
+  background-image: url(./../assets/images/hirePlan/hirePlan__background.JPG);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -902,7 +902,7 @@ footer .socialMedias svg:hover {
 .hirePlanSecondView {
   width: 100%;
   height: 90vh;
-  background-image: url(../assets/images/hirePlan/hirePlanSecondView__backgroundMobile.JPG);
+  background-image: url(./../assets/images/hirePlan/hirePlanSecondView__backgroundMobile.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1087,7 +1087,7 @@ footer .socialMedias svg:hover {
     justify-content: right;
   }
   .hirePlanSecondView {
-    background-image: url(../assets/images/hirePlan/hirePlanSecondView__backgroundDesktop.JPG);
+    background-image: url(./../assets/images/hirePlan/hirePlanSecondView__backgroundDesktop.JPG);
     padding-left: 30%;
   }
 }
