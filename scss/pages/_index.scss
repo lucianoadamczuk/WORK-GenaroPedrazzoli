@@ -1,5 +1,5 @@
 .aboutMe{
-    background-image: url(../../assets/images/index/aboutMe__mobile.jpg);
+    background-image: url(../assets/images/index/aboutMe__mobile.jpg);
     background-size: cover;
     background-position: center;
 
@@ -50,7 +50,7 @@
 }
 
 .librarySection{
-    background-image: url(../../assets/images/index/library__mobile.jpg);
+    background-image: url(../assets/images/index/library__mobile.jpg);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -235,7 +235,7 @@
 
 @media screen and (min-width: 1000px){
     .aboutMe{
-        background-image: url(../../assets/images/index/aboutMe__desktop.jpg);
+        background-image: url(../assets/images/index/aboutMe__desktop.jpg);
         padding-right: 40%;
     }
 
@@ -254,7 +254,7 @@
     }
 
     .librarySection{
-        background-image: url(../../assets/images/index/library__desktop.jpg);
+        background-image: url(../assets/images/index/library__desktop.jpg);
 
 
         .contentContainer{
