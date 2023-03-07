@@ -404,7 +404,7 @@ footer .socialMedias svg:hover {
   }
 }
 .aboutMe {
-  background-image: url(../../assets/images/index/aboutMe__mobile.jpg);
+  background-image: url(../assets/images/index/aboutMe__mobile.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -446,7 +446,7 @@ footer .socialMedias svg:hover {
 }
 
 .librarySection {
-  background-image: url(../../assets/images/index/library__mobile.jpg);
+  background-image: url(../assets/images/index/library__mobile.jpg);
   background-attachment: fixed;
   background-size: cover;
   display: flex;
@@ -612,7 +612,7 @@ footer .socialMedias svg:hover {
 
 @media screen and (min-width: 1000px) {
   .aboutMe {
-    background-image: url(../../assets/images/index/aboutMe__desktop.jpg);
+    background-image: url(../assets/images/index/aboutMe__desktop.jpg);
     padding-right: 40%;
   }
   .myObjetive .contentContainer {
@@ -624,7 +624,7 @@ footer .socialMedias svg:hover {
     align-self: center;
   }
   .librarySection {
-    background-image: url(../../assets/images/index/library__desktop.jpg);
+    background-image: url(../assets/images/index/library__desktop.jpg);
   }
   .librarySection .contentContainer {
     width: 60%;
