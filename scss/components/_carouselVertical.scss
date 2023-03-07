@@ -1,0 +1,89 @@
+
+.myObjetive{
+    .carouselContainer{
+        .slidetracksContainer{
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+                .slidetrackContainer{
+                    width: 100%;
+                    height: 40vh;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+                    overflow: hidden;
+
+                        .slidetrack{
+                            width: 80%;
+                            height: auto;
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+
+                            animation-duration: 30s;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: linear;
+                            
+                                img{
+                                    width: 100%;
+                                    height: 300px;
+                                    margin-bottom: 5px;
+                                    object-fit: cover;
+                                }
+                        }
+
+                        .slidetrack-1{
+                            animation-name: slidetrack1__carouselVertical;
+                            @keyframes slidetrack1__carouselVertical{
+                                0%{
+                                    top: 0%;
+                                }
+                                50%{
+                                    top: -350%;
+                                }
+                                100%{
+                                    top: 0%;
+                                }
+                            }
+                        }
+                
+                        .slidetrack-2{
+                            animation-name: slidetrack2__carouselVertical;
+                            @keyframes slidetrack2__carouselVertical{
+                                0%{
+                                    bottom: 0%;
+                                }
+                                50%{
+                                    bottom: -350%;
+                                }
+                                100%{
+                                    bottom: 0%;
+                                }
+                            }
+                        }
+                }
+    
+
+        }
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .myObjetive{
+        .carouselContainer{
+            .slidetracksContainer{
+                .slidetrackContainer{
+                    min-height: 70vh;
+                        .slidetrack{
+                            img{
+                                height: 400px;
+                            }
+                        }
+                }
+            }
+        }
+    }
+}

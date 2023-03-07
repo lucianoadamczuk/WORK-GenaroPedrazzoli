@@ -1,0 +1,266 @@
+.aboutMe{
+    background-image: url(../../assets/images/index/aboutMe__mobile.jpg);
+    background-size: cover;
+    background-position: center;
+
+        .textContainer{
+            width: 100%;
+            min-height: calc(90vh - 120px);
+            height: auto;
+        }
+
+        .buttonContainer{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+        }
+}
+
+.myObjetive{
+    .contentContainer{
+        height: 90vh;
+        padding: 10px;
+        background-color: $color__primary;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 50% 20%;
+        grid-template-areas: 
+        "textContainer"
+        "carouselContainer"
+        "button";
+        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+        color: $color__secondary;
+        
+            .textContainer{
+                grid-area: textContainer;
+            }
+
+            .carouselContainer{
+                grid-area: carouselContainer;
+                width: 100%;
+            }
+
+            .button{
+                grid-area: button;
+                justify-self: center;
+                align-self: center;
+            }
+    }
+}
+
+.librarySection{
+    background-image: url(../../assets/images/index/library__mobile.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+        .textContainer{
+            padding-left: 20%;
+            color: $color__secondary;
+            text-align: right;
+        }
+
+        .buttonContainer{
+            width: 60%;
+            margin-left: 40%;
+            @include flexStructureColumn;
+            
+                .text{
+                    color: $color__secondary;
+                    text-align: center;
+                }
+        }
+
+        .contentContainer{
+            width: 100%;
+            height: 30vh;
+            padding: 10px;
+            background-color: $color__secondary;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-radius: 10px 10px 0 0;
+
+                .product{
+                    width: 100%;
+                    color: $color__primary;
+                    
+                        .titleContainer{
+                            width: 100%;
+                            height: 70%;
+                            display: flex;
+                            justify-content: flex-end;
+                                
+                                .arrowContainer{
+                                    width: 10%;
+                                    height: 100%;
+                                    @include flexStructureRow;
+
+                                        .bi{
+                                            width: 20px;
+                                            height: 20px;
+                
+                                            justify-self: center;
+                                            align-self: center;
+                
+                                            animation: moveArrow 1s infinite;
+                                            @keyframes moveArrow {
+                                                0%{
+                                                    margin-left: 0%;
+                                                }
+                                                50%{
+                                                    margin-left: 10px;
+                                                }
+                                                100%{
+                                                    margin-left: 0%;
+                                                }
+                                            }
+                                        }
+                                }
+                        }
+
+                        p{
+                            text-align: right
+                        }
+                }
+
+                .product1:hover{
+                    color: $color__quaternary;
+                }
+
+                .product2:hover{
+                    color: $color__quaternary;
+                }
+        }
+}
+
+.frequentQuestions{
+    @include flexStructureRow;
+
+    .contentContainer{
+        width: 100%;
+        min-height: 92vh;
+        height: auto;
+        padding: 10px;
+        background-color: $color__primary;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        border-radius: 10px;
+        color: $color__secondary;
+
+            .title{
+                height: 30vh;
+            }
+            .questionsContainer{
+                width: 100%;
+                min-height: 60vh;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                
+                align-items: center;
+
+                    .question{
+                        width: 80%;
+                        height: auto;
+                        padding: 0 5% 0 5%;
+                        background-color: $color__secondary;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        cursor: pointer;
+
+                            p{
+                                color: $color__primary;
+                            }
+
+                            .bi{
+                                fill: $color__primary;
+                            }
+                    }
+                    
+                    .answer{
+                        width: 80%;
+                        height: auto;
+                        // padding: 1% 5% 1% 5%;
+                        background-color: $color__quintary;
+                        @include flexStructureRow;
+                        
+                            p{
+                                display: none;
+                                text-align: center;
+                                color: $color__secondary;
+                                opacity: 0%;
+                                transition: 1s;
+                            }
+                    }
+
+                    // Run in js
+                    .openAnswer{
+                        animation-name: openAnswer;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes openAnswer {
+                            from{
+                                min-height: 0;
+                            }
+                            to{
+                                min-height: 10vh;
+                            }
+                        }
+                    }
+
+                    .closeAnswer{
+                        animation-name: closeAnswer;
+                        animation-duration: 0.5s;
+                        animation-fill-mode: forwards;
+
+                        @keyframes closeAnswer {
+                            from{
+                                height: 10vh;
+                            }
+                            to{
+                                height: 0;
+                            }
+                        }
+                    }
+
+                    // -
+            }
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .aboutMe{
+        background-image: url(../../assets/images/index/aboutMe__desktop.jpg);
+        padding-right: 40%;
+    }
+
+    .myObjetive{
+        .contentContainer{
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 40% 60%;
+            grid-template-areas: 
+            "textContainer carouselContainer"
+            "button carouselContainer";
+
+                .textContainer{
+                    align-self: center;
+                }
+        }
+    }
+
+    .librarySection{
+        background-image: url(../../assets/images/index/library__desktop.jpg);
+
+
+        .contentContainer{
+            width: 60%;
+            align-self: flex-end;
+            border-radius: 10px 0 0 10px;
+        }
+    }
+}

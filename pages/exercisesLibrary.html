@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>La Libreria de Ejercicios</title>
+</head>
+<body>
+
+    <!-- enterToExercisesLibrary -->
+    <section class="enterToExercisesLibrary" id="enterToExercisesLibrary">
+
+        <p class="size-xxl">Bienvenido a <br> La Libreria de Ejercicios</p>
+        <p class="size-l">El lugar en donde aprenderas la tecnica de los ejercicios correctamente.</p>
+
+        <!-- contentContainer -->
+        <div class="contentContainer">
+
+            <!-- inputContainer -->
+            <div class="inputContainer">
+                <p class="size-l">Ingrese la contraseña</p>
+
+                <input type="password" id="input__exercisesLibrary_enter">
+
+                <div class="button" id="button__exercisesLibrary_enter">
+                    <p class="size-l">Ingresar</p>
+                </div>
+            </div>
+            
+            <br><br>
+
+            <!-- helpContainer -->
+            <div class="helpContainer">
+                <p class="size-l">Gena, no recuerdo la contraseña o no puedo ingresar</p>
+                <a href="">
+                    <a href="https://wa.me/5491153376931?text=*Asistencia con la Libreria de Ejercicios*%20¡Hola Gena! No puedo ingresar a La Librería ¿Hay una nueva contraseña?" class="size-l doYouHelpMe">¿Me ayudas?</a>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- backgroundContainer -->
+        <div class="backgroundContainer">
+            <img src="../assets/images/exercisesLibrary/exercisesLibrary__background.JPG" alt="Background Image">
+
+            <div class="overlay"></div>
+        </div>
+
+    </section>
+
+    <!-- transitionPage -->
+    <section class="transitionPage__libraryExercises" id="transitionPage">
+        <p class="size-xxl">¡Bienvenido Animal!</p>
+
+        <p class="size-l text" id="text__transitionPage__libraryExercises">El contenido se está cargando, ponte cómodo para aprender</p>
+
+        <div class="contentContainer">
+            <div class="spinnerContainer">
+                <div class="spinner" id="spinner"></div>
+                
+                <div class="textContainer" id="countDown">
+                    <!-- filled in js with a p and then with a svg -->
+                </div>
+            </div>
+
+            <div class="phrasesContainer">
+                <p class="size-l" id="text__autoPhrase_fill"></p>
+                <br> <br>
+                <p class="size-l" id="author__autoPhrase_fill"></p>
+            </div>
+    </section>
+
+    <!-- the library -->
+    <section class="libraryExercises" id="libraryExercises">
+
+        <!-- nav -->
+        <nav>
+            <div class="logoContainer">
+                <a href="../index.html" class="size-l">Genaro Pedrazzoli</a>
+            </div>
+    
+            <div class="mobileButton">
+                <svg id="nav__mobileButton" xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+    
+            <div class="linksContainer" id="nav__linksContainer">
+                <a class="size-l navLink">Pecho</a>
+                <a class="size-l navLink">Espalda</a>
+                <a class="size-l navLink">Biceps</a>
+                <a class="size-l navLink">Triceps</a>
+                <a class="size-l navLink">Hombros</a>
+                <a class="size-l navLink">Piernas</a>
+            </div>
+        </nav>
+
+        <p class="size-xxl">La Libreria de Ejercicios</p>
+        <p class="size-xl">El lugar en donde aprenderas la tecnica de los ejercicios correctamente.</p>
+
+        <div class="contentContainer" id="allBoxesContainer">
+
+            <!-- chest -->
+            <div class="boxesContainer" id="chestExercises">
+
+            </div>
+
+            <!-- back -->
+            <div class="boxesContainer" id="backExercises">
+
+            </div>
+
+            <!-- Triceps -->
+            <div class="boxesContainer" id="tricepsExercises">
+
+            </div>
+
+            <!-- biceps -->
+            <div class="boxesContainer" id="bicepsExercises">
+                
+            </div>
+
+            <!-- shoulders -->
+            <div class="boxesContainer" id="shouldersExercises">
+
+            </div>
+
+            <!-- legs -->
+            <div class="boxesContainer" id="legsExercises">
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- scripts -->
+    <script src="../javascript/nav.js"></script>
+    <script src="../javascript/exercisesLibrary.js"></script>
+    <script src="../javascript/autoPhrases.js"></script>
+</body>
+</html>

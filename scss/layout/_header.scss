@@ -1,0 +1,48 @@
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video__mobile{
+            display: flex;
+        }
+
+        .video__desktop{
+            display: none;
+        }
+
+        .textContainer{
+            width: 100%;
+            min-height: 100vh;
+            padding-bottom: 5%;
+            background: linear-gradient(to top, $color__primary, rgba(0, 0, 0, 0));
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+                p{
+                    text-align: center;
+                    color: $color__tertiary;
+                }
+        }
+}
+
+@media screen and (min-width: 1000px){
+    header{
+        .textContainer{
+            padding-left: 5%;
+            p{
+                text-align: left;
+            }
+        }
+    }
+}

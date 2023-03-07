@@ -1,0 +1,15 @@
+.button{
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    background-color: $color__tertiary;
+    @include flexStructureRow;
+    color: $color__primary;
+    border-radius: 10px;
+    box-shadow: 0 0 5px $color__primary;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(105%);
+}

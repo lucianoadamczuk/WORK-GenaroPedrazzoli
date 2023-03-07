@@ -1,0 +1,60 @@
+
+.spinnerContainer{
+    position: relative;
+    .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        width: 100px;
+        height: 100px;
+        
+        border-radius: 50%;
+        border-left-color: $color__quintary;
+    
+        animation: spin 1s ease infinite;
+    }
+
+    .textContainer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        @include flexStructureRow;
+
+            svg{
+                width: 50%;
+                height: 50%;
+                fill: $color__quintary;
+                animation-name: expandSvg;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+                opacity: 0%;
+                @keyframes expandSvg {
+                    0%{
+                        width: 50%;
+                        height: 50%;
+                        opacity: 0%;
+                    }
+                    50%{
+                        opacity: 100%;
+                        width: 60%;
+                        height: 80%;
+                    }
+                    80%{
+                        opacity: 0%;
+                        width: 70%;
+                        height: 90%;
+                    }
+                }
+            }
+    }
+
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

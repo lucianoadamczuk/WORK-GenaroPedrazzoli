@@ -1,0 +1,88 @@
+nav{
+    width: 100vw;
+    height: 50px;
+    padding: 0 10px 0 10px;
+    background-color: $color__primary;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+
+        .logoContainer{
+            width: 40%;
+            height: 100%;
+            @include flexStructureRow;
+
+                a{
+                    color: $color__secondary;
+                }
+        }
+
+        .mobileButton{
+            width: 50px;
+            height: 100%;
+            @include flexStructureRow;
+
+                svg{
+                    width: 100%;
+                    height: 60%;
+                    fill: $color__tertiary;;
+                }
+        }
+
+        .linksContainer{
+            width: 100%;
+            min-height: 30vh;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            background-color: $color__primary;
+            display: none;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+                a{
+                    color: $color__secondary;
+                    cursor: pointer;
+                }
+
+                a:hover{
+                    color: $color__tertiary;
+                }
+        }
+
+        // runs in js
+        .showNav{
+            display: flex;
+        }
+}
+
+@media screen and (min-width: 1000px){
+    nav{
+
+        .logoContainer{
+            width: 20%;
+        }
+        
+        .mobileButton{
+            display: none;
+        }
+
+        .linksContainer{
+            height: 100%;
+            min-height: 0;
+            position: relative;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+
+                a{
+                    margin-right: 5%;
+                }
+        }
+    }
+}

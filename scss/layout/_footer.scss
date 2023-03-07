@@ -1,0 +1,33 @@
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: $color__primary;
+
+        .socialMedias{
+            width: 100%;
+            height: 20vh;
+            @include flexStructureRow;
+
+                svg{
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+                    fill: $color__secondary;
+                }
+
+                svg:hover{
+                    fill: $color__tertiary;
+                    transform: scale(105%);
+                }
+        }
+}
+
+@media screen and (min-width: 1000px){
+    footer{
+        .socialMedias{
+            svg{
+                margin-right: 50px;
+            }
+        }
+    }
+}

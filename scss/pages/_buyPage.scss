@@ -1,0 +1,117 @@
+// ! to ebooks
+.buyPage__ebooks{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    p{
+        position: relative;
+        z-index: 1;
+    }
+
+    .contentContainer{
+        min-height: 65vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        p, li, b{
+            position: relative;
+            z-index: 1;
+        }
+
+        .priceContainer{
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+            @include flexStructureColumn;
+            z-index: 1;
+        }
+    }
+
+    .imgContainer{
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay{
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .overlay2{
+            width: 100%;
+            height: 20vh;
+            background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+// ! to exercises library
+.buyPage__exercisesLibrary{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contentContainer{
+
+        .priceContainer{
+            @include flexStructureColumn;
+        }
+    }
+}
+
+@media screen and (min-width: 500px){
+    // ! to ebooks
+    .buyPage__ebooks{
+        text-align: left;
+
+        .boldText{
+            margin-left: 5%;
+        }
+        .contentContainer{
+            .priceContainer{
+                width: 40%;
+            }
+        }
+
+        .imgContainer{
+            width: 60%;
+            height: 95%;
+            margin-left: 40%;
+            top: 0;
+            right: 0;
+
+            .overlay{
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+            }
+        }
+    }
+
+    // ! to exercises library
+    .buyPage__exercisesLibrary{
+        align-items: flex-start;
+        text-align: left;
+    }
+}

@@ -1,0 +1,34 @@
+.size-l{
+    font-size: 1.6rem;
+
+}
+
+.size-xl{
+    font-size: 3rem;
+}
+
+.size-xxl{
+    font-size: 6rem;
+}
+
+.size-xxxl{
+    font-size: 7rem;
+}
+
+@media screen and (min-width: 1000px){
+    .size-l{
+        font-size: 2rem;
+    }
+    
+    .size-xl{
+        font-size: 4rem;
+    }
+    
+    .size-xxl{
+        font-size: 8rem;
+    }
+
+    .size-xxxl{
+        font-size: 12rem;
+    }
+}

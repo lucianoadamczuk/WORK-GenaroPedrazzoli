@@ -1,0 +1,71 @@
+.carouselInfinite{
+    width: 100%;
+    height: 30vh;
+    @include flexStructureRow;
+    margin-top: 50px;
+    background-color: $color__secondary;
+    overflow: hidden;
+
+        .slidetracksContainer{
+            width: auto;
+            height: 100%;
+            background-color: $color__primary;
+            display: flex;
+            align-items: center;
+            
+                .slidetrak{
+                    min-width: auto;
+                    height: 90%;
+                    display: flex;
+                    
+                        a{
+                            min-width: 80vw;
+                            height: 100%;
+                            margin-right: 10px;
+                            position: relative;
+                            
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 10px;
+                                }
+
+                                .textContainer{
+                                    width: 100%;
+                                    height: 25%;
+                                    background: rgb(255,255,255);
+                                    background: linear-gradient(100deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 254, 0.199) 50%, rgba(3, 0, 0, 0.4) 100%);
+
+                                    position: absolute;
+                                    bottom: 5%;
+                                    left: 0;
+                                    @include flexStructureRow;
+                                    
+                                        p{
+                                            color: $color__tertiary;
+                                            text-align: center;
+                                        }
+                                }
+                        }
+
+                        a:hover{
+                            transform: scale(102%);
+                        }
+                }
+
+        }
+}
+
+@media screen and (min-width: 1000px){
+    .carouselInfinite{
+        height: 50vh;
+            .slidetracksContainer{
+                    .slidetrak{
+                            a{
+                                min-width: 40vw;
+                            }
+                    }
+            }
+    }
+}
