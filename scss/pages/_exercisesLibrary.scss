@@ -114,7 +114,6 @@
     flex-direction: column;
     opacity: 0%;
     transition: 1s;
-    overflow: hidden;
     
         nav{
             top: 0;
@@ -122,46 +121,49 @@
         }
 
         .contentContainer{
+            width: 100%;
+            height: auto;
             margin-top: 2%;
             position: relative;
 
             .boxesContainer{
                 width: 100%;
+                height: auto;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 position: absolute;
+                top: 0;
                 left: 0;
-                opacity: 0;
 
-                .box{
-                    width: 90%;
-                    min-height: 50vh;
-                    margin: 5px 5px 20px 5px;
-                    position: relative;
-                    box-shadow: 0 5px 10px black;
+                    .box{
+                        width: 90%;
+                        min-height: 50vh;
+                        margin: 5px 5px 20px 5px;
+                        position: relative;
+                        box-shadow: 0 5px 10px rgb(0, 0, 0);
 
-                    iframe{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                        video{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+
+                        .title{
+                            width: 100%;
+                            height: 30%;
+                            padding: 0 2% 0 2%;
+                            background: linear-gradient(to bottom, $color__tertiary, rgba(255, 255, 255, 0));
+                            position: absolute;
+                            top: 0;
+                            @include flexStructureRow;
+                            text-align: center;
+                            color: $color__primary;
+                        }
                     }
-
-                    .title{
-                        width: 100%;
-                        height: 30%;
-                        padding: 0 2% 0 2%;
-                        background: linear-gradient(to bottom, $color__tertiary, rgba(255, 255, 255, 0));
-                        position: absolute;
-                        top: 0;
-                        @include flexStructureRow;
-                        text-align: center;
-                        color: $color__primary;
-                    }
-                }
             }
 
         }

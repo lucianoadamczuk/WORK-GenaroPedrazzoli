@@ -70,48 +70,6 @@ const shouldersExercises = document.getElementById(`shouldersExercises`)
 const legsExercises = document.getElementById(`legsExercises`)
 const allBoxesContainer = document.getElementById(`allBoxesContainer`)
 
-// * function to hide all the sections
-function hideContainers(){
-    chestExercises.style.opacity = `0%`
-    backExercises.style.opacity = `0%`
-    bicepsExercises.style.opacity = `0%`
-    tricepsExercises.style.opacity = `0%`
-    shouldersExercises.style.opacity = `0%`
-    legsExercises.style.opacity = `0%`
-}
-
-console.log(chestExercises.offsetHeight)
-navLinks[0].addEventListener(`click`, () => {
-    hideContainers()
-    chestExercises.style.opacity = `100%`
-    allBoxesContainer.style.maxHeight = chestExercises.clientHeight
-})
-
-navLinks[1].addEventListener(`click`, () => {
-    hideContainers()
-    backExercises.style.opacity = `100%`
-    allBoxesContainer.style.maxHeight = backExercises.clientHeight
-})
-
-navLinks[2].addEventListener(`click`, () => {
-    hideContainers()
-    bicepsExercises.style.opacity = `100%`
-})
-
-navLinks[3].addEventListener(`click`, () => {
-    hideContainers()
-    tricepsExercises.style.opacity = `100%`
-})
-
-navLinks[4].addEventListener(`click`, () => {
-    hideContainers()
-    shouldersExercises.style.opacity = `100%`
-})
-
-navLinks[5].addEventListener(`click`, () => {
-    hideContainers()
-    legsExercises.style.opacity = `100%`
-})
 
 // ! Databases of exercise names 
 const database__chest = [`Press Banco Plano con barra`, `Press plano con mancuernas`, `Aperturas en banco plano`, `press plano con un brazo en isometria`, `Press plano con mancuerna a un brazo`, `Empuje en maquina de pecho`, `Flexiones inclinadas sobre banco`, `Press inclinado con barra`, `Press inclinado con mancuernas`, `Aperturas en banco inclinado`, `Press inclinado con disco`, `Press declinado con barra`, `Cruce de poleas horizontal`, `Cruce de poleas descendentes`, `Cruce de poleas ascendentes`, `Flexiones de brazos`, `Flexiones declinadas`, `Cruce de poleas`, `Around the world`]
@@ -121,75 +79,69 @@ const database__triceps = [`Extension con soga`, `Extencion con soga a un brazo`
 const database__shoulders = [`Elevacion frontal a un brazo con mancuerna`, `Elevacion frontal con disco girando`, `Elevacion frontal con disco`, `Elevacion frontal en polea de espalda`, `Elevacion frontal en polea de frente`, `Elevacion lateral con inclinacion`, `Elevacion lateral con isometria`, `Elevacion lateral sentado con mancuerna a un brazo`, `Elevacion lateral en polea`, `Elevacion lateral y frontal en simultaneo`, `Elevaciones frontales con mancuernas`, `Elevaciones laterales acostado con banda`, `Elevaciones laterales con mancuernas`, `Elevaciones laterales sentado con mancuernas`, `Facepull`, `Posterior en polea con soga a un brazo`, `Posterior en TRX`, `Press Arnold`, `Press de hombros en maquina`, `Press militar con barra parado`, `Press militar con mancuernas parado`, `Press militar con mancuernas sentado`, `Elevaciones de pajaro agachado`, `Vuelo de pajaro en banco inclinado`, `Vuelos de pajaro sentado`]
 const database__legs = [`Sentadilla copa con mancuerna`, `Estocadas fijas con mancuernas`, `Estocadas alternadas con mancuernas`, `Sentadilla con salto`, `Sentadilla frontal con mancuernas`, `Sentadilla sumo con mancuernas en steps`, `Peso muerto rumano con mancuernas`, `Peso muerto a una pierna con mancuernas`, `Sentadilla bulgara con mancuernas`, `Hipthrust con mancuernas`, `Hipthrust a una pierna`, `Patada de rana`, `Estocadas caminando con mancuernas`, `Estocadas caminando con barra`, `Sentadilla con barra`, `Peso muerto rumano con barra`, `Peso muerto convencional`, `Peso muerto sumo con barra`, `Prensa`, `Silla de cuadriceps`, `Curl isquio acostado`, `Pantorrillas en prensa`, `Hipthrust con barra`, `Pantorrillas en maquina`]
 
+
+// * function to hide all the sections
+function hideContainers(){
+    chestExercises.style.display = `none`
+    backExercises.style.display = `none`
+    bicepsExercises.style.display = `none`
+    tricepsExercises.style.display = `none`
+    shouldersExercises.style.display = `none`
+    legsExercises.style.display = `none`
+}
+let chestVideosAreVisible = true
+
 // * function to create the information in the DOM
-database__chest.forEach(element => {
-    
-    chestExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[0].addEventListener(`click`, () => {    
+    hideContainers()
 
-});
+    if(chestVideosAreVisible == true){
+        chestExercises.style.display = `flex`
+        chestExercises.innerHTML = `<p> Abierto </p>`
+        chestVideosAreVisible = false
+    }
+    else{
+        chestExercises.style.display = `none`
+        chestExercises.innerHTML = ``
+        chestVideosAreVisible = true
+    }
+})
 
-database__back.forEach(element => {
-
-    backExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[1].addEventListener(`click`, () => {
+    hideContainers()
 
 })
 
-database__biceps.forEach(element => {
-
-    bicepsExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[2].addEventListener(`click`, () => {
+    hideContainers()
 
 })
 
-database__triceps.forEach(element => {
-
-    tricepsExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[3].addEventListener(`click`, () => {
+    hideContainers()
 
 })
 
-database__shoulders.forEach(element => {
-
-    shouldersExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[4].addEventListener(`click`, () => {
+    hideContainers()
 
 })
 
-database__legs.forEach(element => {
-
-    legsExercises.innerHTML += `                
-    <div class="box">
-            
-        <div class="title">
-            <p class="size-xl boxExerciseTitle">${element}</p>
-        </div>
-    </div>`
+navLinks[5].addEventListener(`click`, () => {
+    hideContainers()
+    legsExercises.style.display = `flex`
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
